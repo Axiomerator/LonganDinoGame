@@ -88,6 +88,7 @@ void rgb_update(int *color_t, int *stage_t) {
 */
 
 void waitForRelease_BOOT0() {
+    delay_1ms(1);
     while (1) {
         if (!Get_BOOT0()) {
             break;
@@ -96,6 +97,7 @@ void waitForRelease_BOOT0() {
 }
 
 void waitForRelease_A(int channel_t) {
+    delay_1ms(1);
     while (1) {
         if (!Get_Button(channel_t)) {
             break;
